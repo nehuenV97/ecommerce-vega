@@ -6,31 +6,66 @@
         <title>Morsa Tech</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="/assets/styles/styles.css">
     </head>
     <body>
-        <nav>
-            <ul>
-                <li>
-                    <img src="/assets/img/mt.png" alt="morsa-tech"
-                    style="width: 150px;">
-                </li>
-                <li><a href="index.html">Bienvenidos</a></li>
-                <li><a href="pages/notebooks.html">Notebooks</a></li>
-                <li><a href="pages/celulares.html">Celulares</a></li>
-                <li><a href="pages/accesorios.html">Accesorios</a></li>
-                <li><a href="pages/registro.html">Registro</a></li>
-                <li><a href="pages/login.html">Login</a></li>
-                <li><a href="#">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0z"/>
-                        <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z"/>
-                    </svg>
-                </a></li>
-            </ul>
-        </nav>
-        <h1>Bienvenidos a Morsa Tech</h1>        
-        
+        <header class="header">
+            <nav class="navbar">
+                <div class="logo">
+                    <img src="/assets/img/mt-navbar.svg" alt="morsa-tech">
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="pages/notebooks.html">Notebooks</a></li>
+                    <li><a href="pages/celulares.html">Celulares</a></li>
+                    <li><a href="pages/accesorios.html">Accesorios</a></li>
+                </ul>
+                <div class="nav-buttons">
+                    <a href="pages/registro.html">
+                        <button class="nav-btn">
+                            Registro
+                        </button>
+                    </a>
+                    <a href="pages/login.html">
+                        <button class="nav-btn">
+                            Login
+                        </button>
+                    </a>
+                    <a href="#">
+                        <button class="nav-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0z"/>
+                                <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z"/>
+                            </svg>
+                        </button>
+                    </a>
+                </div>
+            </nav>
+        </header>
+        <div class="titulo">
+            <h1>Bienvenidos a Morsa Tech</h1>
+        </div>
+        <section class="container">
+            <div class="card">
+                <img src="/assets/img/morsa.png" alt="morsa-tech">                
+                <h3>Compu Gamer</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam dolorem accusantium dolore!</p>
+                <button>Ver más</button>
+            </div>   
+            <div class="card">
+                <img src="/assets/img/morsa.png" alt="morsa-tech">                
+                <h3>Compu Gamer</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam dolorem accusantium dolore!</p>
+                <button>Ver más</button>
+            </div>
+            <div class="card">
+                <img src="/assets/img/morsa.png" alt="morsa-tech">                
+                <h3>Compu Gamer</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam dolorem accusantium dolore!</p>
+                <button>Ver más</button>
+            </div>       
+        </section>
+
         <script src="" async defer></script>
     </body>
 </html>
