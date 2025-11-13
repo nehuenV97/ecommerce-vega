@@ -73,6 +73,11 @@ body{
   gap: 25px 10px;
 }
 
+.nav-buttons .userName {
+  color: var(--blanco);
+  font-weight: bold;  
+}
+
 .nav-btn{
   background-color: var(--background);
   color: var(--text);
@@ -85,6 +90,10 @@ body{
 
 .nav-btn:hover{
   background-color: var(--primary);
+}
+
+.nav-btn.btn-logout:hover{
+  background-color: rgb(216, 43, 43);
 }
 
 /* CONTAINER */
@@ -125,11 +134,25 @@ body{
 .card h3 {
   margin: 15px 0 5px;
   color: var(--primary-dark);
+  font-size: 25px;
 }
 
 .card p {
   color: var(--secondary-text);
   margin-bottom: 10px;
+}
+
+.cantidad-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 20px;
+  font-size: x-large;
+  font-weight: bold;
+}
+
+.cantidad-container p {
+  color: var(--text);  
 }
 
 .card button {
@@ -187,4 +210,13 @@ form button {
 
 form button:hover {
   background-color: var(--primary);
+}
+
+form .cuenta {
+  padding-top: 30px;
+  color: var(--blanco);
+}
+
+form .cuenta a {
+  color: var(--primary);
 }
