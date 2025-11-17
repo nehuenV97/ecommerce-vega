@@ -23,6 +23,13 @@ body{
     color: var(--text);
 }
 
+/* ESTRUCTURA */
+.estructura{
+  min-height: 100dvh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
 /* NAVBAR */
 .navbar{
     background-color: var(--primary-dark);
@@ -108,7 +115,7 @@ body{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
-    padding: 40px;
+    padding: 20px 40px 40px 40px;
 }
 
 /* CARD */
@@ -174,7 +181,7 @@ body{
 .form-container {
   width: 100%;
   max-width: 400px;
-  margin: 60px auto;
+  margin: 20px auto;
   background-color: var(--primary-dark);
   padding: 30px;
   border-radius: 10px;
@@ -219,4 +226,15 @@ form .cuenta {
 
 form .cuenta a {
   color: var(--primary);
+}
+
+/* FOOTER */
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--blanco);
+  font-size: 18px;
+  background-color: var(--primary-dark);
+  height: 100px;
 }
