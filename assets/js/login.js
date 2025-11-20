@@ -11,12 +11,12 @@ loginForm.addEventListener("submit", (e) => {
         return;
     }
 
-    const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+    const usuarios = JSON.parse(sessionStorage.getItem("usuarios")) || [];
 
     const usuario = usuarios.find(u => u.email === email && u.password === password);
 
     if (usuario) {
-        localStorage.setItem("usuario", JSON.stringify(usuario));
+        sessionStorage.setItem("usuario", JSON.stringify(usuario));
         window.location.href = "../../index.html";
     } else {
         alert("Usuario no registrado");

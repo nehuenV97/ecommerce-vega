@@ -17,7 +17,7 @@ if (registroForm) {
         }
 
         // Obtenemos usuarios guardados o un array vacío
-        const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+        const usuarios = JSON.parse(sessionStorage.getItem("usuarios")) || [];
 
         // Verificar si ya existe
         const existe = usuarios.find(u => u.email === email);
@@ -28,7 +28,7 @@ if (registroForm) {
 
         // Guarda el nuevo usuario
         usuarios.push({ nombre, apellido, email, password, fecha });
-        localStorage.setItem("usuarios", JSON.stringify(usuarios));
+        sessionStorage.setItem("usuarios", JSON.stringify(usuarios));
 
         alert("¡Registro exitoso! Ya puede iniciar sesión.");
         window.location.href = "./login.html";
