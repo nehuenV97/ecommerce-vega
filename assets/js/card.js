@@ -48,13 +48,23 @@ export const eventosCard = (productos) => {
             const usuario = sessionStorage.getItem("usuario")
 
             if (!usuario) {
-                alert("Inicia sesión para agregar productos al carrito.");
-                location.href = "../../pages/login.html";
+                Swal.fire({
+                    title: "Inicia sesión para agregar productos al carrito",
+                    icon: "warning"  
+                }).then(() => {
+                    location.href = "../../pages/login.html";                    
+                })               
                 return;
             }
 
             agregarAlCarrito(producto, cantidad);
-            alert("Producto agregado al carrito");
+            Swal.fire({              
+                icon: "success",
+                title: "¡Producto agregado al carrito!",
+                showConfirmButton: false,
+                timer: 800,
+                position: "top-end"
+            });            
         });
     });
 };

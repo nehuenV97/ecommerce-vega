@@ -12,7 +12,10 @@ if (registroForm) {
         const fecha = document.getElementById("date").value.trim();
 
         if (!nombre || !apellido || !email || !password || !fecha) {
-            alert("Por favor complete todos los campos");
+            Swal.fire({
+                title: "Por favor complete todos los campos",
+                icon: "warning"  
+            })
             return;
         }
 
@@ -22,7 +25,11 @@ if (registroForm) {
         // Verificar si ya existe
         const existe = usuarios.find(u => u.email === email);
         if (existe) {
-            alert("Ya existe un usuario con ese email");
+            Swal.fire({
+                title: "¡No se pudo registrar!",
+                text: "Ya existe un usuario con ese email",
+                icon: "error"
+            });            
             return;
         }
 
@@ -30,7 +37,13 @@ if (registroForm) {
         usuarios.push({ nombre, apellido, email, password, fecha });
         sessionStorage.setItem("usuarios", JSON.stringify(usuarios));
 
-        alert("¡Registro exitoso! Ya puede iniciar sesión.");
-        window.location.href = "./login.html";
+        Swal.fire({
+            title: "¡Registro exitoso!",
+            text: "Ya puede iniciar sesión",
+            icon: "success"
+        }).then(() => {
+            window.location.href = "./login.html";
+        })        
+        
     });
 }

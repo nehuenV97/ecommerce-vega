@@ -36,6 +36,12 @@ body{
 .icono {
   font-size: 18px;
 }
+
+.icono-white {
+  font-size: 18px;
+  color: var(--blanco);
+}
+
 /* NAVBAR */
 .navbar{
   position: relative;
@@ -106,8 +112,12 @@ body{
   background-color: var(--primary);
 }
 
+.nav-btn.btn-logout{
+  background-color: rgb(180, 30, 30);
+}
+
 .nav-btn.btn-logout:hover{
-  background-color: rgb(216, 43, 43);
+  background-color: rgb(140, 0, 0);
 }
 
 /* CONTAINER */
@@ -187,7 +197,7 @@ body{
 /* LOGIN Y REGISTRO */
 .form-container {
   width: 100%;
-  max-width: 400px;
+  max-width: 380px;
   margin: 20px auto;
   background-color: var(--primary-dark);
   padding: 30px;
@@ -290,21 +300,116 @@ footer {
   text-align: center;
 }
 
+.btn-borrar {
+  padding: 5px;
+  border-radius: 8px;  
+  cursor: pointer;
+  border-style: none;
+  background-color: rgb(180, 30, 30);
+}
+
+.btn-borrar:hover {
+  background-color: rgb(140, 0, 0); 
+}
+
 .carrito-total {
   background-color: var(--primary-dark);
   padding: 10px 20px;
   margin: 10px;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
-.btn-borrar {
-  padding: 5px;
-  border-radius: 8px;  
+.btn-accion {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 16px;
   cursor: pointer;
-  border-style: none;
+  color: var(--blanco);
+  transition: 0.3s ease;
 }
 
-.btn-borrar:hover {
-  background-color: rgb(216, 43, 43);
+.btn-accion.vaciar {
+  background-color: rgb(180, 30, 30);
+}
+
+.btn-accion.vaciar:hover {
+  background-color: rgb(140, 0, 0);
+}
+
+.btn-accion.comprar {
+  background-color: var(--primary);
+}
+
+.btn-accion.comprar:hover {
+  background-color: rgb(1, 117, 212);  
+}
+
+/* RESPONSIVE */
+.container-menu{
+  display: none;
+}
+
+.btn-menu {
+  background-color: var(--background);
+  color: var(--text);
+  border: none;
+  border-radius: 6px;
+  padding: 8px;  
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-menu:hover {
+  background-color: var(--primary);
+}
+
+.hamburger {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: var(--blanco);
+}
+
+/* otra pantallas */
+@media (max-width: 768px) {
+  .container-menu{
+    display: flex;
+  }
+
+  .nav-links,
+  .nav-buttons {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--primary-dark);
+    padding: 20px;
+  }
+
+  .nav-links.active,
+  .nav-buttons.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .navbar {
+    flex-wrap: wrap;
+    height: auto;
+  }
 }

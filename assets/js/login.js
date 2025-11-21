@@ -7,7 +7,10 @@ loginForm.addEventListener("submit", (e) => {
     const password = document.getElementById("password").value.trim();
     
     if (!email || !password) {
-        alert("Por favor complete todos los campos");
+        Swal.fire({
+            title: "Por favor complete todos los campos",
+            icon: "warning"  
+        })
         return;
     }
 
@@ -19,6 +22,9 @@ loginForm.addEventListener("submit", (e) => {
         sessionStorage.setItem("usuario", JSON.stringify(usuario));
         window.location.href = "../../index.html";
     } else {
-        alert("Usuario no registrado");
+        Swal.fire({
+            title: "¡Usuario no registrado!",
+            icon: "warning"  
+        })        
     }
 });
